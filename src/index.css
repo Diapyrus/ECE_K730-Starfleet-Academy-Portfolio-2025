@@ -1,0 +1,38 @@
+/* 1. Φέρνουμε τις γραμματοσειρές από Google Fonts (Oswald & Barlow) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Oswald:wght@400;500;700&display=swap');
+
+/* 2. Ενεργοποιούμε το Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Βασικές ρυθμίσεις εμφάνισης */
+@layer base {
+  body {
+    @apply bg-black text-[#9999CC];
+    font-family: 'Barlow Condensed', sans-serif; /* Η βασική γραμματοσειρά */
+  }
+
+  /* Οι τίτλοι θα έχουν την πιο "τετράγωνη" γραμματοσειρά */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+/* 4. Ειδικά στυλ για τα κουμπιά LCARS (στρογγυλεμένες άκρες) */
+.lcars-pill {
+  @apply rounded-full;
+}
+
+.lcars-pill-right {
+  @apply rounded-l-full rounded-r-none;
+}
+
+.lcars-pill-left {
+  @apply rounded-r-full rounded-l-none;
+}
